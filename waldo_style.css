@@ -1,0 +1,21 @@
+h1{
+  text-align:center;
+  font-family: 'Century Gothic';
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
+}
+
+.WhereWaldoBelong{
+  margin: 0 auto;
+  width: 1000px;
+  height: 500px;
+  border: 5px solid red;
+}
+
+img{
+  position: absolute;
+  opacity: 0.1;
+}
