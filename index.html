@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      img{opacity: 0.1;
+          position: absolute;
+         }
+
+    </style>
+  </head>
+  <body>
+    <h1>Where is Waldo?</h1>
+
+    <img src="waldo.png" id = "waldo" alt="waldo"/>
+
+    <span>Score</span>
+    <span id = "score">0</span>
+
+    <script type="text/javascript">
+      var waldo = document.querySelector("#waldo");
+      var score = 0
+
+
+      function appearance(){
+        waldo.style.opacity = 1
+      }
+      function placeRandomly(el){
+        el.style.left = Math.random() * 500 + "px"
+        el.style.top = Math.random() * 500 + "px"
+      }
+      function youFoundWaldo(){
+        score ++
+        document.querySelector("#score").innerHTML = score
+        waldo.style.opacity = 0.1
+        alert ("You've found Waldo")
+        placeRandomly(waldo)
+      }
+
+
+      waldo.addEventListener("click", appearance)
+      waldo.addEventListener("click", youFoundWaldo)
+      placeRandomly(waldo)
+
+    </script>
+  </body>
+</html>
+<!-- find a way to randomize waldo using math.random from the start, make sure its opacity is 0 to begin with-->
+<!-- then add an eventlistener once waldo is clicked, it should also set the opacity to 1-->
+<!-- Create a location for the score, maybe limit waldo in a certain square
